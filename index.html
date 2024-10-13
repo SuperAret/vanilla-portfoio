@@ -5,34 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victor Ogunwehin Portfolio</title>
     <link href="output.css" rel="stylesheet">
+    <link href="base.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <style>
-        /* Custom styles for the nav menu */
-        .nav__menu {
-            transition: right 0.3s ease-in-out;
-        }
-        .nav__menu.hidden {
-            right: -100%;
-        }
-    </style>
 </head>
 <body class="bg-bgLight font-poppins text-text">
 
     <!-- Header -->
     <header class="fixed top-0 left-0 w-full h-12 bg-white shadow z-50">
-      <div class="container mx-auto flex items-center justify-between px-4 h-full">
+      <div class="container mx-auto flex items-center justify-between p-4 h-full">
         <h1 class="text-lg font-semibold text-gray-900">My Portfolio</h1>
         <nav>
           <ul class="flex space-x-6">
-            <li><a href="#home" class="text-gray-800 hover:text-blue-500">Home</a></li>
-            <li><a href="#about" class="text-gray-800 hover:text-blue-500">About</a></li>
+            <li><a href="#home" class="text-gray-600 hover:text-gray-900  font-medium">Home</a></li>
+            <li><a href="#about" class="text-gray-600 hover:text-gray-900  font-medium">About</a></li>
             <li><a href="#skills" class="text-gray-600 hover:text-gray-900 font-medium">Skills</a></li>
             <li><a href="#services" class="text-gray-600 hover:text-gray-900 font-medium">Services</a></li>
             <li><a href="#portfolio" class="text-gray-600 hover:text-gray-900 font-medium">Portfolio</a></li>  
-            <li><a href="#contact" class="text-gray-800 hover:text-blue-500">Contact</a></li>
+            <li><a href="#contact" class="text-gray-600 hover:text-gray-900  font-medium">Contact</a></li>
           </ul>
         </nav>
-        <button class="text-lg text-gray-900 mr-4 hover:text-blue-500 change-theme">🌙</button>
+        <button class="text-lg text-gray-600 hover:text-gray-900 change-theme">
+          <i class="uil uil-moon change-theme" id="theme-button"></i>
+        </button>
       </div>
     </header>
 
@@ -43,7 +37,7 @@
     <div class="home__container container mx-auto grid md:grid-cols-2 gap-8">
         <div class="home__content grid md:grid-cols-3 gap-6">
             <!-- Social Icons -->
-            <div class="home__social flex flex-col space-y-4">
+            <div class="home__social flex-1 flex flex-col space-y-4">
                 <a href="https://www.linkedin.com/in/ogunwehin-victor/" target="_blank" class="home__social-icon text-xl hover:text-blue-600">
                     <i class="uil uil-linkedin-alt"></i>
                 </a>
@@ -55,6 +49,17 @@
                 </a>
             </div>
 
+            <!-- Home Data -->
+            <div class="home__data text-center md:text-left">
+              <h1 class="home__title text-4xl font-bold">Hi, I'm Victor</h1>
+              <h3 class="home__subtitle text-xl text-gray-600">Mobile App Developer</h3>
+              <p class="home__description text-gray-700 mt-4">High competence and experience in developing Mobile apps with high functionalities
+                  as well as attractive websites to clients satisfaction.</p>
+              <a href="#contact" class="button button--flex home__button mt-6 inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg">
+                  Contact Me<i class="uil uil-message button__icon ml-2"></i>
+              </a>
+          </div>
+      </div>
             <!-- Home Image -->
             <div class="home__img relative">
                 <svg class="home__blob w-48 h-48 mx-auto" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg">
@@ -74,17 +79,7 @@
                 </svg>
             </div>
 
-            <!-- Home Data -->
-            <div class="home__data text-center md:text-left">
-                <h1 class="home__title text-4xl font-bold">Hi, I'm Victor</h1>
-                <h3 class="home__subtitle text-xl text-gray-600">Mobile App Developer</h3>
-                <p class="home__description text-gray-700 mt-4">High competence and experience in developing Mobile apps with high functionalities
-                    as well as attractive websites to clients satisfaction.</p>
-                <a href="#contact" class="button button--flex home__button mt-6 inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg">
-                    Contact Me<i class="uil uil-message button__icon ml-2"></i>
-                </a>
-            </div>
-        </div>
+            
 
         <!-- Scroll Down Button -->
         <div class="home__scroll flex justify-center mt-10 md:mt-0">
@@ -411,90 +406,7 @@
 
     </main>
 
-    <script>
-        // Toggle mobile menu
-        const navToggle = document.getElementById('nav-toggle');
-        const navMenuMobile = document.getElementById('nav-menu-mobile');
-        const navClose = document.getElementById('nav-close');
-
-        navToggle.addEventListener('click', () => {
-            navMenuMobile.classList.toggle('hidden');
-        });
-
-        navClose.addEventListener('click', () => {
-            navMenuMobile.classList.add('hidden');
-        });
-
-        // Theme switcher (optional)
-        const themeButton = document.getElementById('theme-button');
-        const body = document.body;
-
-        themeButton.addEventListener('click', () => {
-            body.classList.toggle('dark');
-        });
-
-        // Select the form and the fields
-const contactForm = document.getElementById('contactForm');
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const subjectInput = document.getElementById('subject');
-const descriptionInput = document.getElementById('description');
-
-// Add event listener for form submission
-contactForm.addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent default form submission behavior
-
-  // Simple validation
-  if (!validateForm()) {
-    alert('Please fill out all fields correctly.');
-    return;
-  }
-
-  // If validation passes, you can now submit the form data
-  const formData = {
-    name: nameInput.value,
-    email: emailInput.value,
-    subject: subjectInput.value,
-    description: descriptionInput.value,
-  };
-
-  // Example: Submit form data via a fake API or send it to your server
-  console.log('Form submitted', formData);
-
-  // Optionally, clear form after submission
-  contactForm.reset();
-});
-
-// Validation function
-function validateForm() {
-  let isValid = true;
-
-  if (nameInput.value.trim() === '') {
-    isValid = false;
-  }
-
-  if (!validateEmail(emailInput.value)) {
-    isValid = false;
-  }
-
-  if (subjectInput.value.trim() === '') {
-    isValid = false;
-  }
-
-  if (descriptionInput.value.trim() === '') {
-    isValid = false;
-  }
-
-  return isValid;
-}
-
-// Helper function to validate email format
-function validateEmail(email) {
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(String(email).toLowerCase());
-}
-
-    </script>
+   <script src="./actions.js"></script>
 
 </body>
 </html>
