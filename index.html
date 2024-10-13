@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Ogunwehin Portfolio</title>
+    <link href="output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <style>
+        /* Custom styles for the nav menu */
+        .nav__menu {
+            transition: right 0.3s ease-in-out;
+        }
+        .nav__menu.hidden {
+            right: -100%;
+        }
+    </style>
+</head>
+<body class="bg-bgLight font-poppins text-text">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full h-12 bg-white shadow z-50">
+      <div class="container mx-auto flex items-center justify-between px-4 h-full">
+        <h1 class="text-lg font-semibold text-gray-900">My Portfolio</h1>
+        <nav>
+          <ul class="flex space-x-6">
+            <li><a href="#home" class="text-gray-800 hover:text-blue-500">Home</a></li>
+            <li><a href="#about" class="text-gray-800 hover:text-blue-500">About</a></li>
+            <li><a href="#skills" class="text-gray-600 hover:text-gray-900 font-medium">Skills</a></li>
+            <li><a href="#services" class="text-gray-600 hover:text-gray-900 font-medium">Services</a></li>
+            <li><a href="#portfolio" class="text-gray-600 hover:text-gray-900 font-medium">Portfolio</a></li>  
+            <li><a href="#contact" class="text-gray-800 hover:text-blue-500">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="text-lg text-gray-900 mr-4 hover:text-blue-500 change-theme">🌙</button>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="mt-20">
+        <!--==================== HOME ====================-->
+<section class="home section py-16" id="home">
+    <div class="home__container container mx-auto grid md:grid-cols-2 gap-8">
+        <div class="home__content grid md:grid-cols-3 gap-6">
+            <!-- Social Icons -->
+            <div class="home__social flex flex-col space-y-4">
+                <a href="https://www.linkedin.com/in/ogunwehin-victor/" target="_blank" class="home__social-icon text-xl hover:text-blue-600">
+                    <i class="uil uil-linkedin-alt"></i>
+                </a>
+                <a href="https://twitter.com/victorogunwehin" target="_blank" class="home__social-icon text-xl hover:text-blue-400">
+                    <i class="uil uil-twitter-alt"></i>
+                </a>
+                <a href="https://www.github.com/ProgViki" target="_blank" class="home__social-icon text-xl hover:text-gray-700">
+                    <i class="uil uil-github-alt"></i>
+                </a>
+            </div>
+
+            <!-- Home Image -->
+            <div class="home__img relative">
+                <svg class="home__blob w-48 h-48 mx-auto" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0" mask-type="alpha">
+                        <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                        130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                        97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                        0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                    </mask>
+                    <g mask="url(#mask0)">
+                        <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                        165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                        129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                        -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                        <image class="home__blob-img object-cover" x="0" y="0" width="100%" height="100%" href="packages/images/firstpix.jpg" />
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Home Data -->
+            <div class="home__data text-center md:text-left">
+                <h1 class="home__title text-4xl font-bold">Hi, I'm Victor</h1>
+                <h3 class="home__subtitle text-xl text-gray-600">Mobile App Developer</h3>
+                <p class="home__description text-gray-700 mt-4">High competence and experience in developing Mobile apps with high functionalities
+                    as well as attractive websites to clients satisfaction.</p>
+                <a href="#contact" class="button button--flex home__button mt-6 inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg">
+                    Contact Me<i class="uil uil-message button__icon ml-2"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Down Button -->
+        <div class="home__scroll flex justify-center mt-10 md:mt-0">
+            <a href="#about" class="home__scroll-button button--flex flex-col items-center">
+                <i class="uil uil-mouse-alt home__scroll-mouse text-2xl"></i>
+                <span class="home__scroll-name text-gray-600">Scroll Down</span>
+                <i class="uil uil-arrow-down home__scroll-arrow text-xl mt-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!--==================== ABOUT ====================-->
+<section class="about section py-16" id="about">
+    <h2 class="section__title text-center text-3xl font-bold">About Me</h2>
+    <span class="section__subtitle text-center text-xl text-gray-600">My Introduction</span>
+
+    <div class="about__container container mx-auto grid md:grid-cols-2 gap-8 mt-10">
+        <img src="packages/images/about_picture (4).jpg"
+         alt="about" 
+         class="w-full h-auto rounded-lg">
+
+        <div class="about__data">
+            <p class="about__description text-gray-700">Mobile App Developer, with extensive knowledge and competence, 
+                in developing mobile apps with or without codes as well as using new technologies, and 
+                professionally delivering quality work in due time.
+            </p>
+
+            <div class="about__info flex space-x-8 my-6">
+                <div class="text-center">
+                    <span class="about__info-title text-3xl font-bold">03+</span>
+                    <span class="about__info-name block text-gray-600">Years <br> experience</span>
+                </div>
+                <div class="text-center">
+                    <span class="about__info-title text-3xl font-bold">05+</span>
+                    <span class="about__info-name block text-gray-600">Completed <br> certifications</span>
+                </div>
+                <div class="text-center">
+                    <span class="about__info-title text-3xl font-bold">02+</span>
+                    <span class="about__info-name block text-gray-600">Companies <br> worked</span>
+                </div>
+            </div>
+
+            <div class="about__buttons">
+                <a href="packages/images/VICTOR_OGUNWEHIN_CV-004.pdf" download="" class="button button--flex bg-blue-600 text-white px-6 py-3 rounded-lg inline-flex items-center">
+                    Download CV<i class="uil uil-download-alt button__icon ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--==================== SKILLS ====================-->
+<section id="skills" class="py-16 bg-white">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center">Skills</h2>
+      <span class="block text-center text-lg text-gray-500 mb-8">My technical level</span>
+  
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="skills__content">
+          <h3 class="text-2xl font-semibold mb-4">Frontend Developer</h3>
+          <ul class="list-disc ml-6 space-y-2">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Next.js</li>
+          </ul>
+        </div>
+  
+        <div class="skills__content">
+          <h3 class="text-2xl font-semibold mb-4">Backend Developer</h3>
+          <ul class="list-disc ml-6 space-y-2">
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>PostgreSQL</li>
+            <li>MongoDB</li>
+            <li>GraphQL</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="qualification" class="py-16 bg-gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center">Qualification</h2>
+      <span class="block text-center text-lg text-gray-500 mb-8">My personal journey</span>
+  
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="qualification__content">
+          <h3 class="text-2xl font-semibold">Education</h3>
+          <p>Bachelor's Degree in Computer Science - XYZ University</p>
+          <p>Master's Degree in Web Development - ABC University</p>
+        </div>
+  
+        <div class="qualification__content">
+          <h3 class="text-2xl font-semibold">Experience</h3>
+          <p>Frontend Developer at Company A (2019-2021)</p>
+          <p>Fullstack Developer at Company B (2021-Present)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-16 bg-white">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center">Services</h2>
+      <span class="block text-center text-lg text-gray-500 mb-8">What I offer</span>
+  
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="service__content p-6 bg-gray-100 shadow-md rounded-lg text-center">
+          <i class="uil uil-web-grid text-5xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+          <p class="text-gray-600">I create responsive websites with modern UI/UX design and best practices.</p>
+        </div>
+  
+        <div class="service__content p-6 bg-gray-100 shadow-md rounded-lg text-center">
+          <i class="uil uil-server-network text-5xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Backend Development</h3>
+          <p class="text-gray-600">I build robust backend APIs with scalability and security in mind.</p>
+        </div>
+  
+        <div class="service__content p-6 bg-gray-100 shadow-md rounded-lg text-center">
+          <i class="uil uil-edit text-5xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
+          <p class="text-gray-600">I craft user-friendly interfaces with attention to detail and user experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="py-16 bg-gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center">Portfolio</h2>
+      <span class="block text-center text-lg text-gray-500 mb-8">Most recent works</span>
+  
+      <div class="swiper-container">
+        <div class="swiper-wrapper grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Portfolio 1 -->
+          <div class="portfolio__content p-4 bg-white shadow-lg rounded-lg swiper-slide">
+            <img src="./packages/images/portfolio1.jpg" alt="Modern Dashboard" class="rounded-md mb-4">
+            <h3 class="text-2xl font-semibold">Modern Dashboard</h3>
+            <p class="text-gray-600">Data analytical dashboard adaptable to all devices with UI components and animated interactions.</p>
+            <a href="#" class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">
+              Demo
+            </a>
+          </div>
+  
+          <!-- Portfolio 2 -->
+          <div class="portfolio__content p-4 bg-white shadow-lg rounded-lg swiper-slide">
+            <img src="./packages/images/portfolio3.PNG" alt="E-Commerce Website" class="rounded-md mb-4">
+            <h3 class="text-2xl font-semibold">E-Commerce Website</h3>
+            <p class="text-gray-600">Above Amazon clone adaptable to all devices, with UI components and animated interactions.</p>
+            <a href="#" class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">
+              Demo
+            </a>
+          </div>
+  
+          <!-- Portfolio 3 -->
+          <div class="portfolio__content p-4 bg-white shadow-lg rounded-lg swiper-slide">
+            <img src="./packages/images/portfolio2.png" alt="Brand Design" class="rounded-md mb-4">
+            <h3 class="text-2xl font-semibold">Brand Design</h3>
+            <p class="text-gray-600">Tesla Clone adaptable to all devices, with UI components and animated interactions.</p>
+            <a href="#" class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">
+              Demo
+            </a>
+          </div>
+        </div>
+  
+        <!-- Add navigation arrows -->
+        <div class="swiper-button-next text-3xl text-gray-500 hover:text-gray-900">
+          <i class="uil uil-angle-right-b"></i>
+        </div>
+        <div class="swiper-button-prev text-3xl text-gray-500 hover:text-gray-900">
+          <i class="uil uil-angle-left-b"></i>
+        </div>
+  
+        <!-- Add pagination -->
+        <div class="swiper-pagination mt-4"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project bg-blue-600 py-16">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+      <div class="project__data text-white">
+        <h2 class="text-3xl font-bold mb-4">You have a new project?</h2>
+        <p class="text-lg mb-6">Contact me now and get discounts on your Web development projects.</p>
+        <a href="#contact" class="inline-block bg-white text-blue-600 py-2 px-4 rounded-lg hover:bg-gray-200">
+          Contact me
+          <i class="uil uil-message ml-2"></i>
+        </a>
+      </div>
+      <!-- Project image (Optional) -->
+      <img src="assets/img/project.png" alt="" class="hidden md:block">
+    </div>
+  </section>
+  
+  <section id="testimonial" class="py-16 bg-gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center">Testimonials</h2>
+      <span class="block text-center text-lg text-gray-500 mb-8">My clients saying</span>
+  
+      <div class="swiper-container">
+        <div class="swiper-wrapper grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="testimonial__content p-4 bg-white shadow-lg rounded-lg swiper-slide">
+            <div class="testimonial__header flex items-center mb-4">
+              <img src="./packages/images/arun.PNG" alt="Client" class="w-16 h-16 rounded-full">
+              <div class="ml-4">
+                <h3 class="text-xl font-semibold">Arun Prashanth</h3>
+                <span class="text-sm text-gray-500">Client</span>
+              </div>
+            </div>
+            <div class="flex mb-4">
+              <i class="uil uil-star text-yellow-500"></i>
+              <i class="uil uil-star text-yellow-500"></i>
+              <i class="uil uil-star text-yellow-500"></i>
+              <i class="uil uil-star text-yellow-500"></i>
+              <i class="uil uil-star text-yellow-500"></i>
+            </div>
+            <p class="text-gray-600">I get a good impression, I carry out my project with all the possible quality and attention and support 24 hours a day.</p>
+          </div>
+          
+          <!-- More testimonials... -->
+        </div>
+        <div class="swiper-pagination mt-4"></div>
+      </div>
+    </div>
+  </section>
+  <section class="contact py-16 bg-gray-100" id="contact">
+    <h2 class="text-3xl font-bold text-center mb-4">Contact Me</h2>
+    <span class="block text-center text-lg text-gray-600 mb-12">Get in touch</span>
+  
+    <div class="container mx-auto grid md:grid-cols-2 gap-8 px-4">
+      <!-- Contact Information -->
+      <div>
+        <div class="mb-6">
+          <i class="uil uil-phone-alt text-3xl text-blue-600"></i>
+          <div class="ml-4 inline-block align-top">
+            <h3 class="text-xl font-semibold">Call Me</h3>
+            <span class="text-gray-600">(+234) 7017885892</span>
+          </div>
+        </div>
+  
+        <div class="mb-6">
+          <i class="uil uil-envelope text-3xl text-blue-600"></i>
+          <div class="ml-4 inline-block align-top">
+            <h3 class="text-xl font-semibold">E-mail</h3>
+            <span class="text-gray-600">victorogunwehin@gmail.com</span>
+          </div>
+        </div>
+  
+        <div class="mb-6">
+          <i class="uil uil-map-marker text-3xl text-blue-600"></i>
+          <div class="ml-4 inline-block align-top">
+            <h3 class="text-xl font-semibold">Location</h3>
+            <span class="text-gray-600">Ogba, Lagos</span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Contact Form -->
+      <form action="" class="grid gap-6">
+        <div class="grid gap-4 md:grid-cols-2">
+          <div>
+            <label for="" class="block mb-2 font-medium text-gray-700">Name</label>
+            <input type="text" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none">
+          </div>
+          <div>
+            <label for="" class="block mb-2 font-medium text-gray-700">E-mail</label>
+            <input type="email" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none">
+          </div>
+        </div>
+        <div>
+          <label for="" class="block mb-2 font-medium text-gray-700">Subject</label>
+          <input type="text" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none">
+        </div>
+        <div>
+          <label for="message" class="block mb-2 font-medium text-gray-700">Description</label>
+          <textarea id="message" rows="7" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none"></textarea>
+        </div>
+        <div>
+          <button class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 flex items-center">
+            Send message
+            <i class="uil uil-message ml-2"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+  <!--==================== FOOTER ====================-->
+  <footer class="footer bg-gray-900 text-white py-8 mt-16">
+    <div class="container mx-auto grid md:grid-cols-3 gap-8 px-4">
+      <div>
+        <h1 class="text-2xl font-bold">Victor Ogunwehin</h1>
+        <span class="text-gray-400">Mobile App Developer</span>
+      </div>
+  
+      <ul class="space-y-2">
+        <li><a href="#services" class="footer__link text-gray-400 hover:text-white">Services</a></li>
+        <li><a href="#portfolio" class="footer__link text-gray-400 hover:text-white">Portfolio</a></li>
+        <li><a href="#contact" class="footer__link text-gray-400 hover:text-white">Contact</a></li>
+      </ul>
+  
+      <div class="flex space-x-4">
+        <a href="https://www.facebook.com/prashanna.drashan" target="_blank" class="footer__social text-gray-400 hover:text-white text-xl">
+          <i class="uil uil-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/prashanna01/" target="_blank" class="footer__social text-gray-400 hover:text-white text-xl">
+          <i class="uil uil-instagram"></i>
+        </a>
+        <a href="https://twitter.com/prashanna01" target="_blank" class="footer__social text-gray-400 hover:text-white text-xl">
+          <i class="uil uil-twitter-alt"></i>
+        </a>
+      </div>
+    </div>
+  
+    <p class="text-center text-gray-500 mt-8">&#169; VikiTech. All rights reserved.</p>
+  </footer>
+  
+
+    </main>
+
+    <script>
+        // Toggle mobile menu
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenuMobile = document.getElementById('nav-menu-mobile');
+        const navClose = document.getElementById('nav-close');
+
+        navToggle.addEventListener('click', () => {
+            navMenuMobile.classList.toggle('hidden');
+        });
+
+        navClose.addEventListener('click', () => {
+            navMenuMobile.classList.add('hidden');
+        });
+
+        // Theme switcher (optional)
+        const themeButton = document.getElementById('theme-button');
+        const body = document.body;
+
+        themeButton.addEventListener('click', () => {
+            body.classList.toggle('dark');
+        });
+
+        // Select the form and the fields
+const contactForm = document.getElementById('contactForm');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const subjectInput = document.getElementById('subject');
+const descriptionInput = document.getElementById('description');
+
+// Add event listener for form submission
+contactForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission behavior
+
+  // Simple validation
+  if (!validateForm()) {
+    alert('Please fill out all fields correctly.');
+    return;
+  }
+
+  // If validation passes, you can now submit the form data
+  const formData = {
+    name: nameInput.value,
+    email: emailInput.value,
+    subject: subjectInput.value,
+    description: descriptionInput.value,
+  };
+
+  // Example: Submit form data via a fake API or send it to your server
+  console.log('Form submitted', formData);
+
+  // Optionally, clear form after submission
+  contactForm.reset();
+});
+
+// Validation function
+function validateForm() {
+  let isValid = true;
+
+  if (nameInput.value.trim() === '') {
+    isValid = false;
+  }
+
+  if (!validateEmail(emailInput.value)) {
+    isValid = false;
+  }
+
+  if (subjectInput.value.trim() === '') {
+    isValid = false;
+  }
+
+  if (descriptionInput.value.trim() === '') {
+    isValid = false;
+  }
+
+  return isValid;
+}
+
+// Helper function to validate email format
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(String(email).toLowerCase());
+}
+
+    </script>
+
+</body>
+</html>
